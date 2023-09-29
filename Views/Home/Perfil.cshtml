@@ -1,0 +1,115 @@
+﻿@model Act1_U1.Models.ViewModels.PerfilViewModel
+@{
+    ViewData["Title"] = "Perfil";
+}
+
+
+<html>
+    <head>
+    @*<link href="~/css/estilo1.css" rel="stylesheet"/>*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <style>
+        body{
+            font-family: Arial;
+            font-size: 14;
+            background-color: #040D12;
+            color: white;
+        }
+        .Inicio {
+            display: flex;
+            border-bottom: 1px solid #FFC600;
+            justify-content: center;
+        }
+        body > div{
+            border-radius: 5px;
+            width: 50%;
+            margin: 0px auto;
+            background-color: #272829;
+            text-align: center;
+            margin-top: 50px;
+        }
+        /*img{
+            width: 50px;
+            height: 50px;
+            margin-top: 8px;
+            justify-self: center;
+        }*/
+        .Inicio i{
+            font-size: 40;
+            justify-content: center;
+            align-items: center;
+            color: black;
+        }
+        .Inicio > div{
+            background-color: #FFC600;
+            border-radius: 80px;
+            height: 90px;
+            width: 90px;
+            justify-items: center;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            margin: 8px;
+            margin-right: 55px;
+            
+        }
+        .Inicio section{
+            font-size: 18;
+        }
+        p{
+            font-weight: bold;
+        }
+        .datos{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .datos section{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial;
+        }
+        .datos i{
+            color: #FFC600;
+            margin-right: 5px;
+        }
+    </style>
+    </head>
+    <body>
+     <div>
+         <div class="Inicio">
+                <div>
+                <i class="fa-solid fa-user fa-beat"></i>
+                </div>
+               
+             <section>
+                <p>@Model.Nombre</p>
+                <p>@Model.NumControl</p>
+             </section>
+         </div>
+         <div class="datos">
+             <section>
+                <i class="fa-solid fa-book-open-reader"></i>
+                <p>@Model.Carrera</p>
+             </section>
+             <section>
+                <i class="fa-solid fa-city "></i>
+                <p>@Model.Ciudad</p>
+             </section>
+             <section>
+                <i class="fa-solid fa-phone "></i>
+                <p>@Model.Telefono</p>
+            </section>
+             <section>
+                <i class="fa-solid fa-envelope "></i>
+                <p>@Model.Correo</p>
+             </section>
+             
+         </div>
+     </div>
+
+    </body>
+</html>
+

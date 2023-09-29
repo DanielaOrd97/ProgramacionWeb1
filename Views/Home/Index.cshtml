@@ -1,0 +1,75 @@
+﻿@model Act1_U1.Models.ViewModels.PerfilViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<html>
+
+    <head>
+        <style>
+            body{
+            background-color: #040D12;
+            text-align:center;
+            }
+            body > div{
+                background-color: #272829;
+                width: 70%;
+                margin: 0px auto;
+                padding: 15px;
+                border-radius: 5px;
+                margin-top: 50px;
+                padding-top:30px;
+                padding-bottom: 30px;
+            }
+            .info{
+            background-color: #FFC600;
+            width: 90%;
+            margin: 0px auto;
+            padding : 10px;
+            border-radius: 5px;
+            }
+            .info section{
+                display:flex;
+                justify-content: center;
+            }
+            .info p{
+                margin-right: 5px;
+            }
+            a{
+            color: white;
+            }
+            a:hover{
+                color: #040D12;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+        
+            <div class="info">
+            <h1>@Model.Materia</h1>
+            <section>
+                <p><b>Semestre:</b></p>
+                <p> @Model.Semestre</p>
+            </section>
+            <section>
+                <p><b>Periodo:</b></p>
+                <p> @Model.Periodo</p>
+            </section>
+            <section>
+                <p><b>Nombre:</b></p>
+                <p> @Model.Nombre</p>
+            </section>
+           
+
+            <a href="~/Home/Perfil">Ver mi perfil</a>
+            </div>
+        
+        </div>
+        
+
+    </body>
+</html>
+
