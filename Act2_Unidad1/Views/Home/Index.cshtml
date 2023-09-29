@@ -1,0 +1,91 @@
+﻿@model Act2_Unidad1.Models.ViewModels.ConversionViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<html>
+    <head>
+        <style>
+          
+
+            body{
+            background-color: #FFFFDD;
+            }
+
+            form{
+            background-color: #016A70;
+            width: 60%;
+            height: 80% ;
+            margin: 0 auto;
+            margin-top: 50px;
+            border-radius: 5px;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 15px;
+            color: white;
+            font-size: 30;
+            }
+            .entrada{
+                margin-left: 5px;
+                font-size: 25;
+                margin-top: 10px;
+                text-align: center;
+                
+            }
+
+            .primero{
+                margin-top: 30px;
+            }
+
+        .divbotones {
+            margin-top: 50px;
+            margin-bottom: 18px;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            padding: 5px;
+        }
+        button{
+            background-color: #FFF5E0;
+            
+            border-radius: 5px;
+        }
+        button:hover
+        {
+                background-color: #A2C579;
+                border-radius: 5px;
+        }
+        #resultado{
+            font-weight: bold;
+        }
+        </style>
+    </head>
+    <body>
+    <form>
+
+        <div class="primero">
+            <label>Cantidad a convertir:</label><br />
+            <input class="entrada" type="number" step="any" value="@Model.Cantidad" name="Cantidad" min="0" />
+        </div>
+            
+
+        <div class="divbotones">
+            <button type="submit" name="Tipo" value="USD">
+                <img src="~/Images/peso.png">
+            </button>
+             <button type="submit" name="Tipo" value="MXN">
+                <img src="~/Images/dollar.png">
+            </button>
+        </div>
+
+        <label id="resultado">@Model.Conversion</label>
+        @*<label id="resultado">@(Model.Conversion.ToString("$00.00"))</label>*@
+    </form>
+    </body>
+</html>
+
+
+
